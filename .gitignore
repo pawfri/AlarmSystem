@@ -1,0 +1,14 @@
+# Visual Studio / .NET
+**/bin/
+**/obj/
+**/.vs/
+*.user
+*.suo
+*.cache
+
+# Node / Vue
+Frontend/alarmsystem-frontend/node_modules/
+Frontend/alarmsystem-frontend/dist/
+
+# Optional: logs
+*.log
