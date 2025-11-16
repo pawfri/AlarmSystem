@@ -8,21 +8,21 @@ namespace AlarmSystemLib;
 
 public class SensorPIR : SensorBase
 {
-    public bool DetectMotion { get; set; }
+    public bool IsMotionDetected { get; set; }
 
     public SensorPIR(int id, string placement, SensorStatus status)
         : base(id, placement, status)
     {
     }
 
-    public void Open()
+    public void MotionDetected()
     {
-        DetectMotion = true;
+        IsMotionDetected = true;
         Trigger();
     }
-    public void Close()
+    public void MotionClear()
     {
-        DetectMotion = false;
+        IsMotionDetected = false;
         Restore();
     }
 }

@@ -13,13 +13,12 @@ public abstract class SensorBase
         Status = status;
     }
 
-    public virtual void Restore()
-    {
-        Status = SensorStatus.Restore;
-    }
-
     public virtual void Trigger()
     {
         Status = SensorStatus.Trigger;
+    }
+    public virtual void Restore()
+    {
+        Status = SensorStatus.Restore;
     }
 }
