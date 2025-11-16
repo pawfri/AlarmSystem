@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace AlarmSystemLib;
 
-public enum AlarmStatus
+public enum SensorStatus
 {
-    Disarm,
-    Arm,
+    Restore,
     Trigger
 }
