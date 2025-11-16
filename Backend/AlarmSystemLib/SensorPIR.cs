@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace AlarmSystemLib;
 
-public class SensorMagnet : SensorBase
+public class SensorPIR : SensorBase
 {
-    public bool IsOpen { get; set; }
+    public bool DetectMotion { get; set; }
 
-    public SensorMagnet(int id, string placement, SensorStatus status)
+    public SensorPIR(int id, string placement, SensorStatus status)
         : base(id, placement, status)
     {
     }
 
     public void Open()
     {
-        IsOpen = true;
+        DetectMotion = true;
         Trigger();
     }
     public void Close()
     {
-        IsOpen = false;
+        DetectMotion = false;
         Restore();
     }
 }
