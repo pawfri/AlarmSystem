@@ -1,10 +1,11 @@
-﻿using System;
+﻿using AlarmSystemLib.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlarmSystemLib;
+namespace AlarmSystemLib.Models;
 
 public class SensorSmoke : SensorBase
 {

@@ -1,4 +1,6 @@
-﻿namespace AlarmSystemLib;
+﻿using AlarmSystemLib.Enums;
+
+namespace AlarmSystemLib.Models;
 
 public abstract class SensorBase
 {
