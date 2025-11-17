@@ -1,4 +1,5 @@
 ﻿using AlarmSystemLib.Models;
+using AlarmSystemLib.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AlarmSystemLib.Services.Repositories;
 
-public  class SensorRepository
+public class SensorRepository : ISensorRepository
 {
     private readonly List<SensorBase> _sensors = new();
     private int _nextId = 1;
