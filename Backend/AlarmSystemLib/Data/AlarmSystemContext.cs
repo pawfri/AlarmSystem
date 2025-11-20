@@ -15,6 +15,7 @@ public class AlarmSystemContext : DbContext
     {
     }
 
+    public DbSet<SensorBase> Sensors { get; set; }
     public DbSet<SensorMagnet> MangetSensors { get; set; }
     public DbSet<SensorMotion> MotionSensors { get; set; }
     public DbSet<SensorSmoke> SmokeSensors { get; set; }
