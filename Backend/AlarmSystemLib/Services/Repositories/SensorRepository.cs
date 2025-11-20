@@ -45,7 +45,7 @@ public class SensorRepository : ISensorRepository
 
     public SensorBase? Delete(int id)
     {
-        SensorBase sensor = GetById(id);
+        SensorBase? sensor = GetById(id);
         if (sensor != null)
         {
             _sensors.Remove(sensor);
