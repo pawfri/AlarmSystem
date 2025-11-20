@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AlarmSystemLib.Models;
 
-public class SensorPIR : SensorBase
+public class SensorMotion : SensorBase
 {
     public bool IsMotionDetected { get; set; }
 
-    public SensorPIR(int id, string placement, SensorStatus status)
+    public SensorMotion(int id, string placement, SensorStatus status)
         : base(id, placement, status)
     {
     }
