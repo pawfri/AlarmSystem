@@ -30,15 +30,18 @@ public class SensorRepository : ISensorRepository
         return sensor;
     }
 
-    public SensorBase? Update(SensorBase sensor)
+    public SensorBase? Update(int id, SensorBase sensor)
     {
-        var existing = GetById(sensor.Id);
+        var existing = GetById(id);
         if (existing == null)
         {
             return null;
         }
 
         var index = _sensors.IndexOf(existing);
+        
+        sensor.Id = id;
+
         _sensors[index] = sensor;
         return sensor;
     }
