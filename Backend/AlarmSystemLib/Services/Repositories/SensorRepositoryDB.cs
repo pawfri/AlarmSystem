@@ -34,13 +34,15 @@ public class SensorRepositoryDB : ISensorRepository
         return sensor;
     }
 
-    public SensorBase? Update(SensorBase sensor)
+    public SensorBase? Update(int id, SensorBase sensor)
     {
-        var existing = _context.Sensors.Find(sensor.Id);
+        var existing = _context.Sensors.Find(id);
         if (existing == null)
         {
             return null;
         }
+
+        sensor.Id = id;
 
         _context.Sensors.Update(sensor);
         _context.SaveChanges();
